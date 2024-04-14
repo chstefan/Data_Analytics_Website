@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Data Analytics Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <section id="header">
+
+       <!-- Nav -->
+       <nav id="nav" style="margin-bottom: 20px;">
+        <ul>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Data Science and Analytics Portfolio</a>
+            <ul>
+              <li><a href="#">Machine Learning</a>
+        <ul>
+          <li><a href="TwitterSentiment.html">Twitter Sentiment Analysis</a></li>
+          <li><a href="IrisFlowerClustering.html">Iris Flower Clustering</a></li>
+          <li><a href="AppleQualityPrediction.html">Apple Quality Prediction</a></li>
+          <li><a href="PersonalityPrediction.html">Personality Profiling</a></li>
+        </ul></li>
+              <li><a href="SQL.html">Playstore Data Management with SQL</a></li>
+              <li><a href="#">Data Processing and Visualisation</a>
+        <ul>
+          <li><a href="PowerBIReport.html">Power BI Report</a></li>
+          <li><a href="Financial_Projections.html">Financial Projections</a></li>
+          <li><a href="CoffeeShopSales.html">Coffee Shop Sales</a></li>
+        </ul></li></li>
+            </ul>
+          </li>
+          <li><a href="Blogposts.html">Content</a>
+      <ul>
+        <li><a href="Blogposts.html">Blog Posts</a></li>
+        <li><a href="Media.html">Media</a></li>
+        <li><a href="MS_Healthcare_Report.html">Report</a></li>
+      </ul></li>
+          <li><a href="#">About me</a>
+      <ul>
+        <li><a href="CV.html">Resume</a></li>
+        <li><a href="Volunteer.html">Volunteering and Freetime</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul></li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <section id="main" style="text-align: left;">
+        <div class="container">
+          <!-- Content -->
+          <article class="box post">
+            <header>
+              <h2 style="line-height: 1.2;">
+                Analytical Insights into Apple Quality Assessment through Data
+                Science
+              </h2>
+              <p>
+                A Comprehensive Evaluation Using Python, Pandas, and Machine
+                Learning
+              </p>
+            </header>
+            <p>
+              In the expanding field of data science, the project on apple
+              quality assessment underscores the integration of analytical
+              techniques and machine learning for practical applications.
+              Employing Python's Pandas and NumPy libraries alongside
+              visualization tools like Matplotlib and Seaborn, this project
+              meticulously explores, cleans, and interprets data pertaining to
+              various quality metrics of apples. Further, the use of Random
+              Forest classifiers from Scikit-learn emphasizes predictive
+              modeling to distinguish between good and bad quality apples. This
+              portfolio piece elaborately discusses the methodologies,
+              challenges, and outcomes of the project, aiming to highlight its
+              contribution to agricultural data science.
+            </p>
+            <section>
+              <header>
+                <h3>Part 1: Data Preprocessing and Exploration</h3>
+              </header>
+              <p>
+                The initial phase of the project involves importing the dataset
+                apple_quality.csv into the Python environment, which comprises
+                several quality metrics of apples including size, weight,
+                ripeness, and a subjective quality rating. The Pandas library
+                facilitates data manipulation, allowing for a comprehensive
+                statistical summary through df.describe() and identification of
+                data types via df.info(). Significant in this phase is the
+                attention to data cleanliness and integrity. The removal of
+                irrelevant columns (e.g., 'A_id') and rows with missing values
+                ensures the dataset's robustness for analysis. Moreover, the
+                conversion of data types, particularly transforming 'Acidity' to
+                numeric and encoding 'Quality' into a binary numerical format,
+                reflects the meticulous data preprocessing crucial for
+                subsequent analysis.
+              </p>
+            </section>
+            <section>
+              <header>
+                <h3>Part 2: Statistical Analysis and Visualization</h3>
+              </header>
+              <p>
+                This section delves into the statistical properties of the
+                dataset, employing the Shapiro-Wilk test to assess the normality
+                of the distributions of numerical features. Such a statistical
+                test is instrumental in understanding the underlying assumptions
+                of the data, which can influence the choice of analytical and
+                machine learning methods. Visualization techniques serve as
+                powerful tools for data exploration, offering intuitive insights
+                into the dataset's characteristics. Through histograms and
+                box-plots of attributes like size, sweetness, crunchiness, and
+                ripeness, the project reveals significant variations and
+                distributions within the apple quality metrics. These
+                visualizations not only aid in identifying outliers but also in
+                understanding the relationships between different attributes.
+              </p>
+              <img
+                src="images/AppleFeatureImportance.png"
+                alt="Feature Importance"
+              />
+            </section>
+            <section>
+              <header>
+                <h3>Part 3: Machine Learning for Quality Prediction</h3>
+              </header>
+              <p>
+                The cornerstone of this project is the application of the Random
+                Forest classifier to predict the quality of apples based on
+                measured attributes. Initially, the model is trained using all
+                available features, followed by a refined approach focusing
+                solely on non-invasive measures (size, weight, ripeness) that do
+                not require damaging the apple. This strategic choice underlines
+                the project's aim to develop practical and efficient quality
+                assessment methods. Model performance is evaluated through
+                accuracy metrics, providing evidence of the predictive model's
+                effectiveness. The analysis extends to feature importance,
+                offering insights into which attributes most significantly
+                impact apple quality assessment. Such findings not only validate
+                the predictive model but also guide future research and
+                practical applications in the agricultural industry.
+              </p>
+              <img
+                src="images/AppleModelCompair.png"
+                alt="Quality Prediction"
+              />
+            </section>
+            <ul class="actions">
+              <li>
+                <a
+                  href="https://github.com/chstefan/Apple_Quality_Prediction.git"
+                  class="button alt"
+                  >Link to Github</a
+                >
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

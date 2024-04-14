@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Data Analytics Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <section id="header">
+
+        <!-- Nav -->
+        <nav id="nav" style="margin-bottom: 20px;">
+         <ul>
+           <li class="current"><a href="index.html">Home</a></li>
+           <li>
+             <a href="#">Data Science and Analytics Portfolio</a>
+             <ul>
+               <li><a href="#">Machine Learning</a>
+         <ul>
+           <li><a href="TwitterSentiment.html">Twitter Sentiment Analysis</a></li>
+           <li><a href="IrisFlowerClustering.html">Iris Flower Clustering</a></li>
+           <li><a href="AppleQualityPrediction.html">Apple Quality Prediction</a></li>
+           <li><a href="PersonalityPrediction.html">Personality Profiling</a></li>
+         </ul></li>
+               <li><a href="SQL.html">Playstore Data Management with SQL</a></li>
+               <li><a href="#">Data Processing and Visualisation</a>
+         <ul>
+           <li><a href="PowerBIReport.html">Power BI Report</a></li>
+           <li><a href="Financial_Projections.html">Financial Projections</a></li>
+           <li><a href="CoffeeShopSales.html">Coffee Shop Sales</a></li>
+         </ul></li></li>
+             </ul>
+           </li>
+           <li><a href="Blogposts.html">Content</a>
+       <ul>
+         <li><a href="Blogposts.html">Blog Posts</a></li>
+         <li><a href="Media.html">Media</a></li>
+         <li><a href="MS_Healthcare_Report.html">Report</a></li>
+       </ul></li>
+           <li><a href="#">About me</a>
+       <ul>
+         <li><a href="CV.html">Resume</a></li>
+         <li><a href="Volunteer.html">Volunteering and Freetime</a></li>
+         <li><a href="Contact.html">Contact</a></li>
+       </ul></li>
+         </ul>
+       </nav>
+
+      <!-- Main -->
+      <section id="main" style="text-align: left;">
+        <div class="container">
+          <!-- Content -->
+          <article class="box post">
+            <header>
+              <h2 style="line-height: 1.2;">
+                Unveiling the Mysteries of Iris Data: A Data Science Exploration
+              </h2>
+              <p>Visualizing and Clustering with R and ggplot2</p>
+            </header>
+            <p>
+              In the world of data science, the Iris dataset has long been a
+              staple for illustrating the power of statistical analysis and
+              machine learning techniques. This portfolio piece navigates
+              through an analytical journey, utilizing R, a programming language
+              revered for its statistical computing capabilities, and ggplot2, a
+              powerful visualization package. The project encapsulates data
+              exploration, visualization, and clustering applied to the Iris
+              dataset, aiming to uncover patterns and insights within the data.
+              This narrative serves as a comprehensive documentation of the
+              methodology, challenges, and outcomes, providing a blueprint for
+              similar data science endeavors.
+            </p>
+            <section>
+              <header>
+                <h3>Part 1: Data Exploration and Understanding</h3>
+              </header>
+              <p>
+                The adventure begins with loading the Iris dataset, a process
+                simplified by R's efficient data handling capabilities. The
+                head() function offers a preliminary glance at the dataset,
+                revealing key attributes: Sepal Length, Sepal Width, Petal
+                Length, Petal Width, and Species. This initial exploration is
+                crucial for acquainting oneself with the dataset's structure and
+                nuances. Subsequently, the summary() and str() functions are
+                employed to delve deeper into the dataset's characteristics. The
+                summary provides a statistical overview of each attribute,
+                including measures like mean, median, and quartiles, shedding
+                light on the data's distribution. The structure (str) function,
+                on the other hand, reveals the dataset's composition, including
+                the types of variables and their arrangement. This foundational
+                understanding is pivotal for guiding subsequent analytical
+                strategies.
+              </p>
+            </section>
+            <section>
+              <header>
+                <h3>Part 2: Visualizing the Iris Data</h3>
+              </header>
+              <p>
+                Visualization plays a vital role in data science, offering
+                intuitive insights that numbers alone cannot convey. Employing
+                ggplot2, a boxplot is created to compare the Sepal Lengths
+                across different Iris species, offering a visual representation
+                of variance within species. This visualization not only
+                highlights differences in sepal lengths but also provides clues
+                about potential outliers, underscoring the diversity within the
+                dataset. Moreover, the pairs() function creates a comprehensive
+                pairs plot, presenting scatter plots for every possible pair of
+                attributes within the Iris dataset. This visualization is
+                augmented with color coding to differentiate between species,
+                offering a multidimensional perspective on the relationships
+                between attributes. Through these visual explorations, patterns
+                begin to emerge, suggesting intrinsic groupings within the data
+                that beckon further analysis.
+              </p>
+            </section>
+            <section>
+              <header>
+                <h3>Part 3: Clustering and Pattern Recognition</h3>
+              </header>
+              <p>
+                The quest for uncovering patterns within the Iris dataset leads
+                to the application of k-means clustering, a method chosen for
+                its efficacy in identifying groups based on attribute
+                similarities. The process is initiated by setting a seed to
+                ensure reproducibility, a critical practice in data science to
+                ensure consistent results across runs. K-means clustering is
+                then applied to the numerical attributes of the Iris dataset,
+                aiming to partition the data into three clusters. The
+                integration of the resulting cluster assignments back into the
+                Iris dataset paves the way for comparing these machine-learned
+                groupings against the known species classification. The table()
+                function facilitates this comparison, offering insights into the
+                congruence between natural species groupings and algorithmically
+                determined clusters. This juxtaposition not only validates the
+                clustering approach but also illuminates the complexity and
+                nuances of natural groupings.
+              </p>
+            </section>
+            <ul class="actions">
+              <li>
+                <a
+                  href="https://github.com/chstefan/Iris_Flowers_KMeans_Clustering.git"
+                  class="button alt"
+                  >Link to Github</a
+                >
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Analytics Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <section id="header">
+
+        <!-- Nav -->
+        <nav id="nav" style="margin-bottom: 20px;">
+         <ul>
+           <li class="current"><a href="index.html">Home</a></li>
+           <li>
+             <a href="#">Data Science and Analytics Portfolio</a>
+             <ul>
+               <li><a href="#">Machine Learning</a>
+         <ul>
+           <li><a href="TwitterSentiment.html">Twitter Sentiment Analysis</a></li>
+           <li><a href="IrisFlowerClustering.html">Iris Flower Clustering</a></li>
+           <li><a href="AppleQualityPrediction.html">Apple Quality Prediction</a></li>
+           <li><a href="PersonalityPrediction.html">Personality Profiling</a></li>
+         </ul></li>
+               <li><a href="SQL.html">Playstore Data Management with SQL</a></li>
+               <li><a href="#">Data Processing and Visualisation</a>
+         <ul>
+           <li><a href="PowerBIReport.html">Power BI Report</a></li>
+           <li><a href="Financial_Projections.html">Financial Projections</a></li>
+           <li><a href="CoffeeShopSales.html">Coffee Shop Sales</a></li>
+         </ul></li></li>
+             </ul>
+           </li>
+           <li><a href="Blogposts.html">Content</a>
+       <ul>
+         <li><a href="Blogposts.html">Blog Posts</a></li>
+         <li><a href="Media.html">Media</a></li>
+         <li><a href="MS_Healthcare_Report.html">Report</a></li>
+       </ul></li>
+           <li><a href="#">About me</a>
+       <ul>
+         <li><a href="CV.html">Resume</a></li>
+         <li><a href="Volunteer.html">Volunteering and Freetime</a></li>
+         <li><a href="Contact.html">Contact</a></li>
+       </ul></li>
+         </ul>
+       </nav>
+
+      <!-- Main -->
+      <section id="main" style="text-align: left;">
+        <div class="container">
+          <!-- Content -->
+          <article class="box post">
+            <header>
+              <h2 style="line-height: 1.2;">Personality Prediction</h2>
+              <p>Leveraging Machine Learning to Decode Human Traits</p>
+            </header>
+            <p>
+              In the dynamic field of data science, the fusion of psychological
+              metrics with advanced analytical techniques opens new avenues for
+              understanding complex human behaviors. This portfolio piece
+              details a pioneering project: predicting personality traits using
+              a sophisticated machine learning pipeline, underpinned by
+              Principal Component Analysis (PCA) for dimensionality reduction.
+              This initiative not only demonstrates technical prowess in
+              handling high-dimensional data but also underscores a deep
+              commitment to applying data science in unraveling the nuances of
+              human personality.
+            </p>
+            <section>
+              <header>
+                <h3>Project Overviewn</h3>
+              </header>
+              <p>
+                The project embarked on a quest to understand how various
+                factors, including physical characteristics, personal
+                preferences, and behavioral ratings, correlate with personality
+                traits. The dataset, rich in both numerical and categorical
+                variables, underwent a thorough preprocessing phase to ensure
+                its readiness for advanced statistical analysis. The heart of
+                the analysis lay in the application of PCA, a technique chosen
+                for its efficiency in reducing dimensionality while preserving
+                the essence of the dataset's variance.
+              </p>
+            </section>
+            <section>
+              <header>
+                <h3>Data Preprocessing: The Foundation</h3>
+              </header>
+              <p>
+                Data preprocessing formed the bedrock of the project, involving meticulous cleaning, normalization, and encoding steps. Variables such as height, weight, shoe size, and subjective ratings on psychological scales were standardized to bring uniformity to the data, ensuring that each variable contributed equally to the analysis. This phase underscored the importance of rigorous data preparation in paving the way for meaningful statistical exploration.
+              </p>
+              <img
+                src="images/PersonalityCorrelations.png"
+                alt="Feature Importance"
+                />
+            </section>
+            <section>
+              <header>
+                <h3>The PCA: Extracting Meaning from Multidimensionality</h3>
+              </header>
+              <p>
+                With the data primed, PCA was employed to tackle the dataset's complexity head-on. The technique's ability to transform the original variables into a set of linearly uncorrelated components was pivotal in uncovering the underlying structure of personality traits. The project's PCA revealed seven principal components, which together accounted for 72% of the total variance within the dataset, a significant reduction from the multidimensional original space.
+              </p>
+              <p>
+                Principal Components Unpacked:
+              </p>
+              <p>
+                Principal Component 1 (PC1) emerged as a fascinating amalgam of physical attributes and a hint of personal ratings, suggesting a blend of innate and psychological dimensions.
+                PC2 and subsequent components progressively unraveled the intricate dance between personal ratings on psychological scales and various other metrics, each layer peeling back to reveal further nuances of personality.
+                The meticulous breakdown of contributions across components illuminated the complex interplay between seemingly disparate variables, highlighting how physical attributes, daily habits, and subjective self-assessments converge to sketch the multifaceted portrait of personality.
+              </p>
+              <img src="images/PersonalityPCA1.png" alt="Quality Prediction" width="900" height="600">
+              <img src="images/PersonalityPCA2.png" alt="Quality Prediction" width="900" height="600">
+            </section>
+            <section>
+              <header>
+                <h3>Insights and Implications</h3>
+              </header>
+              <p>
+                The PCA's outcome, particularly the explained variance ratio and the detailed contributions to each principal component, offered profound insights into the nature of personality. Notably, the dominance of physical attributes in PC1 raised intriguing questions about the relationship between the corporeal and the psychological, prompting a reevaluation of traditional personality assessment models.
+              </p>
+              <p>
+                Furthermore, the variance explained by the components underscored the complexity of human personality, revealing that while a substantial portion can be understood through PCA, a significant depth remains beyond the reach of this analysis. This observation elegantly captures the project's essence — a quest not to oversimplify personality but to appreciate its inherent complexity through a quantitative lens.
+              </p>
+            </section>
+            <section>
+              <header>
+                <h3>Challenges, Reflections, and Future Directions</h3>
+              </header>
+              <p>
+                Embarking on this analytical journey was not without its hurdles. The choice of variables, the decision on the number of components to retain, and the interpretation of the results demanded a delicate balance between statistical rigor and psychological insight. This project served as a powerful reminder of the complexities involved in quantifying human traits and the need for interdisciplinary approaches in data analysis.
+              </p>
+              <p>
+                Looking ahead, the project opens numerous avenues for further exploration, including the integration of additional psychological metrics, the application of PCA in predictive modeling, and the exploration of alternative dimensionality reduction techniques. The potential to enhance personality prediction models with these insights beckons future research, promising richer understanding and more nuanced applications in psychology, marketing, and beyond.
+              </p>
+            </section>
+            <ul class="actions">
+              <li>
+                <a href="https://github.com/chstefan/Personality_Profiling.git" class="button alt">Link to Github</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+      </body>
+      </html>

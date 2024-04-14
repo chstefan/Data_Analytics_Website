@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Analytics Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+         <!-- Header -->
+         <section id="header">
+          <!-- Nav -->
+          <nav id="nav" style="margin-bottom: 20px;">
+            <ul>
+              <li class="current"><a href="index.html">Home</a></li>
+              <li>
+                <a href="#">Data Science and Analytics Portfolio</a>
+                <ul>
+                  <li><a href="#">Machine Learning</a>
+            <ul>
+              <li><a href="TwitterSentiment.html">Twitter Sentiment Analysis</a></li>
+              <li><a href="IrisFlowerClustering.html">Iris Flower Clustering</a></li>
+              <li><a href="AppleQualityPrediction.html">Apple Quality Prediction</a></li>
+              <li><a href="PersonalityPrediction.html">Personality Profiling</a></li>
+            </ul></li>
+                  <li><a href="SQL.html">Playstore Data Management with SQL</a></li>
+                  <li><a href="#">Data Processing and Visualisation</a>
+            <ul>
+              <li><a href="PowerBIReport.html">Power BI Report</a></li>
+              <li><a href="Financial_Projections.html">Financial Projections</a></li>
+              <li><a href="CoffeeShopSales.html">Coffee Shop Sales</a></li>
+            </ul></li></li>
+                </ul>
+              </li>
+              <li><a href="Blogposts.html">Content</a>
+          <ul>
+            <li><a href="Blogposts.html">Blog Posts</a></li>
+            <li><a href="Media.html">Media</a></li>
+            <li><a href="MS_Healthcare_Report.html">Report</a></li>
+          </ul></li>
+              <li><a href="#">About me</a>
+          <ul>
+            <li><a href="CV.html">Resume</a></li>
+            <li><a href="Volunteer.html">Volunteering and Freetime</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul></li>
+            </ul>
+          </nav>
+
+      <!-- Main -->
+      <section id="main" style="text-align: left;">
+        <div class="container">
+          <!-- Content -->
+          <article class="box post">
+            <header>
+              <h2 style="line-height: 1.2;">
+                Coffee Shop Sales Exploratory Data Analysis and Forecasting Model
+              </h2>
+              <p>
+                This portfolio entry outlines an EDA and forecasting model development using a Coffee Shop Sales dataset. The project demonstrates proficiency in Python for data analysis, including preprocessing, visualization, and predictive modeling techniques. The dataset comprises transactions from a coffee shop, with features like transaction quantity, unit price, total bill, store location, product category, and transaction time.
+              </p>
+            </header>  
+              </p>
+              <h3>Data Preprocessing</h3>
+              <p>
+                The initial steps involve loading the data using pandas and inspecting it for missing values, ensuring a clean and complete dataset for analysis. Subsequent preprocessing includes:
+              </p>
+              <ul>
+                <li>Merging transaction_date and transaction_time into a singular datetime column for better temporal analysis.</li>
+                <li>Dropping duplicates to ensure data uniqueness.</li>
+                <li>Standardizing numerical values such as transaction_qty, unit_price, and Total_Bill using StandardScaler to normalize the data distribution.</li>
+              </ul>
+            
+              <h3>Feature Engineering</h3>
+              <p>
+                To enhance the model's predictive capabilities:
+              </p>
+              <ul>
+                <li>Categorical variables (e.g., store_location, product_category) are transformed into dummy variables, facilitating their use in regression models.</li>
+                <li>A comprehensive set of features is selected, focusing on both time-related and categorical variables, to predict the total bill.</li>
+              </ul>
+            
+              <h3>Data Visualization</h3>
+              <p>
+                The script employs seaborn for various visualizations:
+              </p>
+              <ul>
+                <li>Boxplots for numerical columns to identify outliers and distribution characteristics.</li>
+                <li>Pair plots for selected numerical features to observe relationships and distributions across multiple dimensions.</li>
+                <li>Scatter plots, particularly between unit_price and Total_Bill, to examine linear relationships.</li>
+              </ul>
+              <header>
+                <h3>Monthly Sales Trend Analysis</h3>
+              </header>
+              <div class="chart-description">
+                <p>
+                  The first chart presents a clear visualization of the monthly sales trend throughout the year 2023. It appears to depict significant seasonality in sales, with notable peaks and troughs. For instance, a substantial peak in May suggests a high demand period, possibly due to seasonal promotions or events. Conversely, the sales dip in June and September might indicate a cyclical downturn, which could be due to various external factors. Understanding these trends is crucial for strategic planning, inventory management, and targeted marketing campaigns to optimize sales performance throughout the year.
+                </p>
+                <img
+                  src="images/CoffeeSalesTrend.png"
+                  alt="Monthly Sales Trend"
+                  style="width: 700px; height: 400px;"
+                />
+              </div>
+              <header>
+                <h3>Inter-Feature Relationship Examination</h3>
+              </header>
+              <div class="chart-description">
+                <p>
+                  The second chart is a matrix of scatter plots, providing a pairwise comparison of three key metrics: transaction quantity, unit price, and total bill. This visualization is instrumental in uncovering relationships between the quantities purchased, pricing strategies, and the resultant sales. For example, the scatter plot correlating transaction quantity with the total bill indicates a positive relationship, suggesting that higher sales volumes typically lead to increased revenue. However, the distribution of points also suggests a diminishing return for larger quantities, which may imply bulk discounts or pricing strategies that incentivize larger purchases. The plot between unit price and total bill might reveal insights into pricing elasticity and its effect on sales revenue.
+                </p>
+                <img
+                  src="images/CoffeeSalesData.png"
+                  alt="Inter-Feature Relationship Scatter Plot Matrix"
+                  style="width: 700px; height: 700px;"
+                />
+              </div>
+            
+              <h3>Sales Forecasting Model</h3>
+                <p>
+                  A Linear Regression model is developed to forecast sales, incorporating:
+                </p>
+              <ul>
+                <li>A data split into training and testing sets for model evaluation.</li>
+                <li>A pipeline combining one-hot encoding for categorical features, standard scalar for numerical features, and linear regression for modeling.</li>
+                <li>Evaluation of model performance through the Root Mean Squared Error (RMSE) metric, offering a quantitative measure of the model's accuracy.</li>
+              </ul>
+            
+              <h3>Analysis of Output</h3>
+                <p>
+                  The script's structured approach to EDA and model development provides insights into the coffee shop's sales dynamics. The preprocessing steps ensure data quality, while feature engineering enhances the dataset's informational value. Visualizations offer intuitive understanding of key relationships and data characteristics, pivotal for informed decision-making.
+                </p>
+                <p>
+                 The sales forecasting model, evaluated using RMSE, signifies the project's culmination into a predictive analytics tool. This model can serve as a foundation for further refinement and deployment, aiding the coffee shop in inventory management, marketing strategies, and financial planning.
+                </p>
+            
+              <h3>Conclusion</h3>
+                <p>
+                  This project exemplifies a comprehensive analytical approach to understanding and forecasting sales in a retail context. Through meticulous data preparation, exploratory analysis, and predictive modeling, it showcases the potential of data analytics in transforming business operations and strategic planning. The proficiency in leveraging Python's analytical libraries underscores a robust skill set in data science, ready for application in a wide array of professional analytics scenarios.
+                </p>
+
+                <ul class="actions">
+                  <li>
+                    <a
+                      href="https://github.com/chstefan/EDA_Coffee_Shop_Sales.git"
+                      class="button alt"
+                      >Link to Github</a
+                    >
+                  </li>  
+            </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

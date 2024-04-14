@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Analytics Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <section id="header">
+
+        <!-- Nav -->
+        <nav id="nav" style="margin-bottom: 20px;">
+         <ul>
+           <li class="current"><a href="index.html">Home</a></li>
+           <li>
+             <a href="#">Data Science and Analytics</a>
+             <ul>
+               <li><a href="#">Machine Learning</a>
+         <ul>
+           <li><a href="TwitterSentiment.html">Twitter Sentiment Analysis</a></li>
+           <li><a href="IrisFlowerClustering.html">Iris Flower Clustering</a></li>
+           <li><a href="AppleQualityPrediction.html">Apple Quality Prediction</a></li>
+           <li><a href="PersonalityPrediction.html">Personality Profiling</a></li>
+         </ul></li>
+               <li><a href="SQL.html">Playstore Data Management with SQL</a></li>
+               <li><a href="#">Data Processing and Visualisation</a>
+         <ul>
+           <li><a href="PowerBIReport.html">Power BI Report</a></li>
+           <li><a href="Financial_Projections.html">Financial Projections</a></li>
+           <li><a href="CoffeeShopSales.html">Coffee Shop Sales</a></li>
+         </ul></li></li>
+             </ul>
+           </li>
+           <li><a href="Blogposts.html">Content</a>
+       <ul>
+         <li><a href="Blogposts.html">Blog Posts</a></li>
+         <li><a href="Media.html">Media</a></li>
+         <li><a href="MS_Healthcare_Report.html">Report</a></li>
+       </ul></li>
+           <li><a href="#">About me</a>
+       <ul>
+         <li><a href="CV.html">Resume</a></li>
+         <li><a href="Volunteer.html">Volunteering and Freetime</a></li>
+         <li><a href="Contact.html">Contact</a></li>
+       </ul></li>
+         </ul>
+       </nav>
+
+      <!-- Main -->
+      <section id="main" style="text-align: left;">
+        <div class="container">
+          <!-- Content -->
+          <article class="box post">
+            <header>
+              <h2 style="line-height: 1.2;">Google Play Store Data Analysis and Database Management</h2>
+              <p>Project Overview</p>
+            </header>
+            <p>
+              In this project, I embarked on a comprehensive data cleaning,
+              analysis, and database creation process using a dataset obtained
+              from the Google Play Store. The objective was to refine the
+              dataset for better analysis, implement it into a relational
+              database, and perform queries to extract meaningful insights
+              regarding app trends and performance.
+            </p>
+            <section>
+              <header>
+                <h3>Data Preprocessing with Python</h3>
+              </header>
+              <p>
+                The first phase involved using Python's
+                <code>pandas</code> library and a custom size conversion
+                function to clean the dataset. The steps included reading the
+                data, casting columns to the correct data types, parsing dates,
+                and dropping duplicates. The cleaned data was saved as
+                'googleplaystore_cleaned.csv'.
+              </p>
+            </section>
+            <section>
+              <header>
+                <h3>Database Creation and Data Insertion using PostgreSQL</h3>
+              </header>
+              <p>
+                A PostgreSQL database called <code>google_play_store</code> was
+                created, and a table <code>apps</code> was structured to contain
+                the dataset attributes. Data from the cleaned CSV was imported
+                into the database using the <code>\copy</code> command.
+              </p>
+            </section>
+            <section>
+              <header>
+                <h3>Data Analysis Queries</h3>
+              </header>
+              <p>
+                Several SQL queries were executed to derive insights such as
+                category distribution, average ratings, top installed apps,
+                content rating distribution, and top apps by category and type,
+                using advanced SQL features like window functions.
+              </p>
+            </section>
+            <section>
+              <header>
+                <h3>Conclusion</h3>
+              </header>
+              <p>
+                This project demonstrates my comprehensive data analytics
+                capabilities, combining Python and SQL to prepare and analyze
+                data. The detailed process and findings are a testament to my
+                professional approach to data analysis and management.
+              </p>
+            </section>
+            <section>
+              <header>
+                <h2>SQL Queries Executed</h2>
+              </header>
+              <table>
+                <tr>
+                  <th>Query Description</th>
+                  <th>SQL Command</th>
+                </tr>
+                <tr>
+                  <td>Category Distribution</td>
+                  <td>
+                    <code
+                      >SELECT category, COUNT(*) AS number_of_apps FROM apps
+                      GROUP BY category ORDER BY number_of_apps DESC;</code
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Average Ratings by Category</td>
+                  <td>
+                    <code
+                      >SELECT category, AVG(rating) AS avg_rating FROM apps
+                      GROUP BY category ORDER BY avg_rating DESC;</code
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Top Installed Apps</td>
+                  <td>
+                    <code
+                      >SELECT app_name, installs FROM apps ORDER BY installs
+                      DESC LIMIT 10;</code
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Content Rating Distribution</td>
+                  <td>
+                    <code
+                      >SELECT content_rating, COUNT(*) AS number_of_apps FROM
+                      apps GROUP BY content_rating ORDER BY number_of_apps
+                      DESC;</code
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>Top Apps by Category and Type</td>
+                  <td>
+                    <code
+                      >WITH ranked_apps AS (SELECT category, type, app_name,
+                      installs, ROW_NUMBER() OVER(PARTITION BY category, type
+                      ORDER BY installs DESC) AS rank FROM apps) SELECT
+                      category, type, app_name, installs FROM ranked_apps WHERE
+                      rank = 1 ORDER BY category, type;</code
+                    >
+                  </td>
+                </tr>
+              </table>
+            </section>
+            <ul class="actions">
+              <li>
+                <a
+                  href="https://github.com/chstefan/GooglePlaystore-Market-Analysis-with-SQL.git"
+                  class="button alt"
+                  >Link to Github</a
+                >
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

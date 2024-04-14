@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Analytics Portfolio</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <section id="header">
+
+        <!-- Nav -->
+        <nav id="nav" style="margin-bottom: 20px;">
+         <ul>
+           <li class="current"><a href="index.html">Home</a></li>
+           <li>
+             <a href="#">Data Science and Analytics</a>
+             <ul>
+               <li><a href="#">Machine Learning</a>
+         <ul>
+           <li><a href="TwitterSentiment.html">Twitter Sentiment Analysis</a></li>
+           <li><a href="IrisFlowerClustering.html">Iris Flower Clustering</a></li>
+           <li><a href="AppleQualityPrediction.html">Apple Quality Prediction</a></li>
+           <li><a href="PersonalityPrediction.html">Personality Profiling</a></li>
+         </ul></li>
+               <li><a href="SQL.html">Playstore Data Management with SQL</a></li>
+               <li><a href="#">Data Processing and Visualisation</a>
+         <ul>
+           <li><a href="PowerBIReport.html">Power BI Report</a></li>
+           <li><a href="Financial_Projections.html">Financial Projections</a></li>
+           <li><a href="CoffeeShopSales.html">Coffee Shop Sales</a></li>
+         </ul></li></li>
+             </ul>
+           </li>
+           <li><a href="Blogposts.html">Content</a>
+       <ul>
+         <li><a href="Blogposts.html">Blog Posts</a></li>
+         <li><a href="Media.html">Media</a></li>
+         <li><a href="MS_Healthcare_Report.html">Report</a></li>
+       </ul></li>
+           <li><a href="#">About me</a>
+       <ul>
+         <li><a href="CV.html">Resume</a></li>
+         <li><a href="Volunteer.html">Volunteering and Freetime</a></li>
+         <li><a href="Contact.html">Contact</a></li>
+       </ul></li>
+         </ul>
+       </nav>
+
+      <!-- Main -->
+      <section id="main" style="text-align: left;">
+        <div class="container">
+          <!-- Content -->
+          <article class="box post">
+            <header>
+              <h2 style="line-height: 1.2;">Harnessing AI for Twitter Post Analysis</h2>
+              <p>
+                Empowering Text Classification with BERT and Python Libraries
+              </p>
+            </header>
+            <p>
+              In the realm of data science, sentiment analysis stands as a
+              cornerstone, especially when dissected through the lens of social
+              media data. This portfolio piece delves into the intricate process
+              of deploying a machine learning model, specifically focusing on
+              classifying Twitter sentiments using Python's renowned libraries
+              such as Pandas, Scikit-learn, and Transformers. By leveraging the
+              robust BERT (Bidirectional Encoder Representations from
+              Transformers) model, we aim to categorize tweets into sentiments,
+              providing invaluable insights into public opinion. This
+              documentation outlines the methodology, challenges, and results of
+              the sentiment analysis project, aiming to serve as a comprehensive
+              guide for similar endeavors.
+            </p>
+            <section>
+              <header>
+                <h3>Part 1: Setting the Stage for Analysis</h3>
+              </header>
+              <p>
+                The journey begins with data acquisition, where Twitter data is
+                collected and stored in CSV files, distinguishing between
+                training and validation datasets. The Python Pandas library
+                plays a pivotal role in this initial stage, enabling data
+                manipulation and cleaning. Ensuring data quality, irrelevant or
+                missing data is filtered out, concentrating on the 'Sentiment'
+                and 'Text' columns necessary for analysis. This meticulous
+                preparation is crucial, setting a solid foundation for the
+                machine learning process.
+              </p>
+              <p>
+                A unique aspect of this project is the encoding of sentiments
+                into numerical values, a step that translates qualitative
+                sentiment labels into a format interpretable by machine learning
+                models. This encoding transforms sentiments such as 'Positive',
+                'Neutral', 'Negative', and 'Irrelevant' into numerical
+                counterparts, facilitating their use in computational
+                algorithms. The preparation phase culminates in the conversion
+                of cleaned data into a format compatible with the Transformers
+                library, marking the transition from data preparation to machine
+                learning modeling.
+              </p>
+            </section>
+            <section>
+              <header>
+                <h3>Part 2: Training the BERT Model</h3>
+              </header>
+              <p>
+                The core of this project revolves around the implementation and
+                training of the BERT model, a cutting-edge tool in natural
+                language processing. The choice of BERT is strategic, leveraging
+                its pre-trained knowledge to enhance the accuracy of sentiment
+                classification. This process involves tokenizing the text data,
+                converting it into a format that BERT can understand and
+                process. The tokenization process is tailored to handle large
+                texts by truncating and padding them, ensuring uniformity across
+                data inputs. Training the model is a nuanced process, managed
+                through the Transformers' Trainer class, which abstracts and
+                simplifies the complexities of machine learning model training.
+                The training arguments are meticulously set to optimize
+                performance, including epoch numbers, batch sizes, and
+                evaluation strategies. This phase is critical, as it adjusts the
+                model to recognize and classify sentiment based on the nuances
+                of the training data. A noteworthy challenge in this stage is
+                balancing accuracy with computational efficiency. The choice of
+                training parameters, such as batch size and number of epochs,
+                requires careful consideration to achieve optimal model
+                performance without overburdening computational resources.
+              </p>
+            </section>
+            <section>
+              <header>
+                <h3>Part 3: Evaluating Model Performance</h3>
+              </header>
+              <p>
+                After training, the model undergoes evaluation using the
+                validation dataset to assess its performance in sentiment
+                classification. This step is crucial for understanding the
+                model's practical applicability and areas for improvement. The
+                evaluation metrics, including accuracy and a detailed
+                classification report, offer insights into how well the model
+                differentiates between various sentiments. The classification
+                report, generated by Scikit-learn's classification_report
+                function, provides a granular view of the model's performance
+                across different sentiments. This report not only showcases the
+                model's accuracy but also highlights its precision, recall, and
+                F1-score for each sentiment category. Such detailed metrics are
+                invaluable for identifying strengths and weaknesses in the
+                model's ability to classify sentiments accurately.
+              </p>
+            </section>
+            <ul class="actions">
+              <li>
+                <a
+                  href="https://github.com/chstefan/Twitter_Sentiment_Analysis_Unlabeled_Data.git"
+                  class="button alt"
+                  >Link to Github</a
+                >
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
